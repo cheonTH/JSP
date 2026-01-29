@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\fullstack\JSP\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2085135324.index
+\jsp17\src\main\java
+C:\fullstack\JSP\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\620534568.index
+\jsp17-web\src\main\java

@@ -1,0 +1,29 @@
+package controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet{
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		request.setCharacterEncoding("UTF-8");
+		
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		
+		if("admin".equals(id) && "1234".equals(pw)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("loginId", id);
+			
+			response.sendRedirect(request.getContextPath() + "/day1_main.jsp");
+		}else {
+			response.sendRedirect(request.getContextPath() + "/login.jsp?error=1");
+		}
+	}
+}
